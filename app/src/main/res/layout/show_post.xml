@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/colorBackground"
+        android:orientation="vertical">
+
+    <!-- 상단 고정 텍스트 -->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorBackground">
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="산책할 친구 구해요"
+                android:layout_gravity="center"
+                android:textSize="15sp"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:alpha="0.3"/>
+    </LinearLayout>
+
+    <!-- 스크롤 가능한 게시물 목록 -->
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="15dp"
+            tools:context=".showpost_activity">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorBackground">
+
+            <include layout="@layout/post_layout"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:alpha="0.2"/>
+
+            <include layout="@layout/post_layout"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:alpha="0.2"/>
+
+            <include layout="@layout/post_layout"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:alpha="0.2"/>
+            <include layout="@layout/post_layout"/>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:alpha="0.2"/>
+
+            <include layout="@layout/post_layout"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
