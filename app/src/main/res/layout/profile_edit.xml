@@ -6,27 +6,36 @@
     android:background="@color/colorBackground"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@color/colorBackground"
-        android:orientation="vertical">
+        android:layout_marginBottom="10dp">
 
         <ImageView
             android:id="@+id/editImage"
             android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
             android:layout_marginBottom="16dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_foreground" />
-    </LinearLayout>
+
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/editImage"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:text="사진 수정" />
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorBackground"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +51,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorBackground"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
