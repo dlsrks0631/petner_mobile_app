@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "549079374693",
+    "project_id": "petner-712b3",
+    "storage_bucket": "petner-712b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549079374693:android:0066ddc5a593e33171df8c",
+        "android_client_info": {
+          "package_name": "com.example.petner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyButNNX77Dmbuan4RlAaKHPtx7hNzc8OKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
