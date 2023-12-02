@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.PETner" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-
+        <item name="colorPrimaryDark">#AD8B73</item>
     </style>
 
     <style name="Theme.PETner" parent="Base.Theme.PETner"/>
