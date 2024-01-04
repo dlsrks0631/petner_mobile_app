@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".addpost_activity"
+    tools:context=".AddPostActivity"
     android:background="@color/colorBackground"
     android:orientation="vertical">
 
@@ -20,6 +20,7 @@
             >
 
             <android.widget.Button
+                android:id="@+id/goback"
                 android:layout_width="45dp"
                 android:layout_height="40dp"
                 android:background="@drawable/arrow_left"
@@ -32,11 +33,11 @@
 
             <android.widget.Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:text="저장"
                 android:textColor="@color/black"
-                android:background="@color/colorFocus"
                 android:id="@+id/saveBtn"
+                android:background="@drawable/border_radius2"
                 />
         </LinearLayout>
 
@@ -56,26 +57,31 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@color/colorBackground"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/editImage"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="16dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_launcher_foreground" />
+                app:civ_border_color="@color/colorFocus"
+                app:civ_border_width="8dp"
+                android:src="@drawable/dog" />
 
             <android.widget.Button
                 android:id="@+id/editButton"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/editImage"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:background="@color/colorFocus"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:background="@drawable/border_radius2"
                 android:text="사진 수정" />
         </RelativeLayout>
         <LinearLayout
@@ -87,8 +93,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="이름"/>
+                android:text="이름"
+                android:layout_marginBottom="8dp"/>
             <EditText
+                android:privateImeOptions="defaultInputmode=korean"
+                android:id="@+id/editname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_style"/>
@@ -102,11 +111,49 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="견종"/>
+                android:text="견종"
+                android:layout_marginBottom="8dp"/>
             <EditText
+                android:privateImeOptions="defaultInputmode=korean"
+                android:id="@+id/edittype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edit_text_style"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="크기" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioBig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="대형견" />
+
+                <RadioButton
+                    android:id="@+id/radioMiddle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="중형견" />
+                <RadioButton
+                    android:id="@+id/radioSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="소형견" />
+            </RadioGroup>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

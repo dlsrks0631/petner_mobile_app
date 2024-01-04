@@ -2,6 +2,8 @@ package com.example.petner
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.style.StyleSpan
 import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
@@ -64,17 +66,20 @@ class FindPasswordActivity : AppCompatActivity() {
                 }
         }
     }
-    private fun showResultDialog(message: String) {
-        val alertDialogBuilder = AlertDialog.Builder(this)
-        alertDialogBuilder.setTitle("비밀번호 찾기 결과")
-        alertDialogBuilder.setMessage(message)
 
+    private fun showResultDialog(message: String) {
+        val spannableMessage = SpannableString(message)
+        spannableMessage.setSpan(StyleSpan(android.graphics.Typeface.BOLD), 0, message.length, 0)
+
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle(" 비밀번호 찾기 결과")
+        alertDialogBuilder.setMessage(spannableMessage)
+        alertDialogBuilder.setIcon(R.drawable.pawprint)
         alertDialogBuilder.setPositiveButton("확인") { dialog, _ ->
             dialog.dismiss()
         }
 
         val alertDialog: AlertDialog = alertDialogBuilder.create()
         alertDialog.show()
-
     }
 }

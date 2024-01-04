@@ -1,209 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFBE9">
-
-    <!-- 뒤로 돌아가기 버튼 -->
-    <ImageButton
-        android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:src="@drawable/arrow"
-        android:background="?android:attr/selectableItemBackgroundBorderless"/>
-
-    <!-- 타이틀 -->
-    <TextView
-        android:layout_marginTop="30dp"
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Petner"
-        android:textSize="45sp"
-        android:layout_centerHorizontal="true"
-        android:textColor="#E3CAA5"
-        android:textStyle="bold"
-        android:shadowColor="#AD8B73"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="5"/>
-
-    <!-- 타이틀 옆 이미지 -->
-    <ImageView
-        android:id="@+id/titleImageView"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="35dp"
-        android:layout_toEndOf="@id/titleTextView"
-        android:layout_marginStart="10dp"
-        android:src="@drawable/pawprint"/>
-
-    <!-- 아이디 입력란 -->
-    <EditText
-        android:id="@+id/editTextId"
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/titleTextView"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp"
-        android:background="#FFFFFF"
-        android:hint="이메일 ID"
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:textSize="18sp" />
-
-    <!-- 중복 체크 버튼 -->
-
-    <android.widget.Button
-        android:id="@+id/checkDuplicateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextId"
-        android:layout_marginLeft="275dp"
-        android:layout_marginTop="-47dp"
-        android:background="#E3CAA5"
-        android:text="중복 체크"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp" />
-    <!-- 중복 체크 결과 텍스트뷰 -->
-    <TextView
-        android:id="@+id/duplicateCheckResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/checkDuplicateButton"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="50dp"
-        android:text=""
-        android:textSize="14sp"/>
-
-    <!-- 이름 입력란 -->
-    <EditText
-        android:id="@+id/editTextName"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/duplicateCheckResult"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:padding="10dp"
-        android:hint="이름"
-        android:background="#FFFFFF"
-        android:textColor="#000000"
-        android:textSize="18sp"/>
+        android:layout_height="match_parent"
+        android:background="#FFFBE9">
 
-    <!-- 비밀번호 입력란 -->
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextName"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:padding="10dp"
-        android:hint="비밀번호"
-        android:background="#FFFFFF"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:inputType="textPassword"/>
-    <!-- 비밀번호 확인 입력란 -->
-    <EditText
-        android:id="@+id/editTextPasswordCheck"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPassword"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:padding="10dp"
-        android:hint="비밀번호 확인"
-        android:background="#FFFFFF"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:inputType="textPassword"/>
+        <!-- 뒤로 돌아가기 버튼 -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/arrow"
+            android:background="?android:attr/selectableItemBackgroundBorderless"/>
 
-    <!-- 전화번호 입력란 -->
-    <EditText
-        android:id="@+id/editTextPhoneNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/birthdateLayout"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:padding="10dp"
-        android:hint="전화번호"
-        android:inputType="number"
-        android:background="#FFFFFF"
-        android:textColor="#000000"
-        android:textSize="18sp"/>
+        <!-- 타이틀 -->
+        <TextView
+            android:layout_marginTop="30dp"
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Petner"
+            android:textSize="45sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#E3CAA5"
+            android:textStyle="bold"
+            android:shadowColor="#AD8B73"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="5"/>
 
-    <!-- 생년월일 입력란 -->
-    <LinearLayout
-        android:layout_below="@id/editTextPasswordCheck"
-        android:id="@+id/birthdateLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:orientation="horizontal">
+        <!-- 타이틀 옆 이미지 -->
+        <ImageView
+            android:id="@+id/titleImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="35dp"
+            android:layout_toEndOf="@id/titleTextView"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/pawprint"/>
 
-        <!-- 년 선택 -->
+        <!-- 아이디 입력란 -->
         <EditText
-            android:id="@+id/editTextYear"
-            android:layout_width="0dp"
+            android:id="@+id/editTextId"
+            android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:hint="생년(4자)"
+            android:layout_below="@id/titleTextView"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
             android:background="#FFFFFF"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:inputType="number"/>
-
-        <!-- 월 선택 (Spinner) -->
-        <Spinner
-            android:id="@+id/spinnerMonth"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:hint="이메일 ID"
             android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <!-- 중복 체크 버튼 -->
+
+        <android.widget.Button
+            android:id="@+id/checkDuplicateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextId"
+            android:layout_marginLeft="275dp"
+            android:layout_marginTop="-47dp"
+            android:background="#E3CAA5"
+            android:text="중복 체크"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+        <!-- 중복 체크 결과 텍스트뷰 -->
+        <TextView
+            android:id="@+id/duplicateCheckResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkDuplicateButton"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="50dp"
+            android:text=""
+            android:textSize="14sp"/>
+
+        <!-- 이름 입력란 -->
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/photoButton"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:padding="10dp"
+            android:hint="대표 강아지 이름"
             android:background="#FFFFFF"
             android:textColor="#000000"
             android:textSize="18sp"/>
-
-        <!-- 일 선택 -->
-        <EditText
-            android:id="@+id/editTextDay"
-            android:layout_width="0dp"
+        <!-- 프로필 사진 업로드를 위한 버튼 -->
+        <Button
+            android:id="@+id/photoButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_below="@id/profilePhoto"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/rounded_button"
+            android:layout_marginRight="50dp"
+            android:text="강아지 프로필 사진 업로드"
+            android:textStyle="bold"
+            android:onClick="selectImage"/>
+
+        <!-- 프로필 사진을 표시할 ImageView -->
+        <ImageView
+            android:id="@+id/profilePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/duplicateCheckResult"
+            android:layout_marginTop="10dp"
+            android:background="#E3CAA5"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/default_profile_image"/>
+        <!-- 성별 선택 라디오 그룹 -->
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextName"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextName"
+                android:layout_marginLeft="50dp"
+                android:text="강아지 성별"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+            <!-- 남성 라디오 버튼 -->
+            <RadioButton
+                android:id="@+id/radioButtonMale"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수컷"
+                android:textStyle="bold"
+                android:checked="true"/> <!-- 기본적으로 선택되어 있도록 설정 -->
+
+            <!-- 여성 라디오 버튼 -->
+            <RadioButton
+                android:id="@+id/radioButtonFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="암컷"/>
+            <!-- 중성화 여부 체크박스 -->
+            <CheckBox
+                android:id="@+id/checkBoxNeutered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="중성화 여부"
+                android:textStyle="bold"
+                android:layout_marginLeft="15dp"
+                android:layout_below="@id/editTextName" />
+        </RadioGroup>
+        <!-- 견종 입력란 -->
+        <EditText
+            android:id="@+id/editTextDogType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioGroupGender"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
             android:padding="10dp"
-            android:hint="일"
+            android:hint="견종"
+            android:background="#FFFFFF"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+        <!-- 크기 선택 스피너 -->
+        <Spinner
+            android:id="@+id/spinnerSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextDogType"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:padding="10dp"
+            android:background="#FFFFFF"
+            android:textColor="#000000"
+            android:inputType="none"
+            android:focusable="false"
+            android:textSize="18sp"/>
+
+        <!-- 비밀번호 입력란 -->
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinnerSize"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:padding="10dp"
+            android:hint="비밀번호"
             android:background="#FFFFFF"
             android:textColor="#000000"
             android:textSize="18sp"
-            android:inputType="number"/>
-    </LinearLayout>
+            android:inputType="textPassword"/>
+        <!-- 비밀번호 확인 입력란 -->
+        <EditText
+            android:id="@+id/editTextPasswordCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextPassword"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:padding="10dp"
+            android:hint="비밀번호 확인"
+            android:background="#FFFFFF"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:inputType="textPassword"/>
 
-    <!-- 회원가입 버튼 -->
-    <android.widget.Button
-        android:id="@+id/signupButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editTextPhoneNumber"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:padding="15dp"
-        android:text="회원가입"
-        android:textSize="18sp"
-        android:textColor="#FFFFFF"
-        android:background="#E3CAA5"/>
+        <!-- 전화번호 입력란 -->
+        <EditText
+            android:id="@+id/editTextPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextPasswordCheck"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:padding="10dp"
+            android:hint="전화번호"
+            android:inputType="number"
+            android:background="#FFFFFF"
+            android:textColor="#000000"
+            android:textSize="18sp"/>
+        <!-- 주소 입력을 위한 EditText -->
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextPhoneNumber"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:padding="10dp"
+            android:hint="주소 검색"
+            android:background="#FFFFFF"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="false"
+            android:inputType="none"
+            android:onClick="openAddressSearchActivity"
+            />
 
-</RelativeLayout>
+
+        <!-- 회원가입 버튼 -->
+        <android.widget.Button
+            android:id="@+id/signupButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextAddress"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:padding="15dp"
+            android:text="회원가입"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#E3CAA5"
+            android:layout_marginBottom="20dp"/>
+
+    </RelativeLayout>
+</ScrollView>

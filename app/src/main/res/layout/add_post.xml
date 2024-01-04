@@ -4,7 +4,7 @@
 		xmlns:tools="http://schemas.android.com/tools"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		tools:context=".addpost_activity"
+		tools:context=".AddPostActivity"
 		android:background="@color/colorBackground"
 		android:orientation="vertical">
 
@@ -20,9 +20,12 @@
 				>
 
 			<android.widget.Button
-					android:layout_width="45dp"
-					android:layout_height="40dp"
-					android:background="@drawable/arrow_left"
+				android:id="@+id/button_arrow_left"
+				android:layout_width="48dp"
+				android:layout_height="48dp"
+				android:background="@drawable/arrow_left"
+				android:contentDescription="이전으로 돌아가기 버튼"
+				android:padding="12dp"
 					/>
 
 			<View
@@ -35,9 +38,9 @@
 					android:layout_height="wrap_content"
 					android:text="저장"
 					android:textColor="@color/black"
-					android:background="@color/colorFocus"
+					android:background="@drawable/border_radius2"
 					android:id="@+id/saveBtn"
-					/>
+					android:padding="16dp"/>
 		</LinearLayout>
 
 		<View
@@ -69,16 +72,13 @@
 			<View
 					android:layout_width="match_parent"
 					android:layout_height="13dp"/>
-			<FrameLayout
-					android:layout_width="match_parent"
-					android:layout_height="250dp"
-					android:background="@drawable/border_radius">
-				<ImageView
-						android:layout_width="50dp"
-						android:layout_height="50dp"
-						android:background="@drawable/image_regular"
-						android:layout_gravity="center"/>
-			</FrameLayout>
+
+			<ImageView
+				android:id="@+id/addphoto_image"
+				android:layout_width="match_parent"
+				android:layout_height="250dp"
+				android:layout_gravity="center"/>
+
 			<View
 					android:layout_width="match_parent"
 					android:layout_height="13dp"/>
@@ -90,7 +90,10 @@
 		<LinearLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:orientation="vertical">
+				android:clickable="true"
+				android:focusable="true"
+				android:orientation="vertical"
+				android:onClick="onEditTitleClick">
 			<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
@@ -101,29 +104,36 @@
 					android:layout_width="match_parent"
 					android:layout_height="5dp"/>
 			<EditText
+					android:id="@+id/edit_title"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:background="@drawable/edit_text_style"/>
+					android:background="@drawable/edit_text_style"
+					android:privateImeOptions="defaultInputmode=korean"
+					android:hint="제목을 입력하세요"
+				/>
 			<View
 					android:layout_width="match_parent"
 					android:layout_height="13dp"/>
 			<TextView
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:text="반려동물 정보 입력"
+					android:text="반려동물 정보 입력(성별, 견종, 위치 입력 필수)"
 					android:textSize="13sp"
 					android:alpha="0.5"/>
 			<View
 					android:layout_width="match_parent"
 					android:layout_height="5dp"/>
 			<EditText
+					android:id="@+id/edit_explain"
+					android:privateImeOptions="defaultInputmode=korean"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:background="@drawable/edit_text_style"
 					android:inputType="textMultiLine"
 					android:minLines="4"
 					android:maxLines="10"
-					android:scrollbars="vertical"/>
+					android:scrollbars="vertical"
+					android:hint="반려동물 정보를 입력하세요 (성별, 견종, 위치 등)"/>
 		</LinearLayout>
 	</LinearLayout>
 </LinearLayout>

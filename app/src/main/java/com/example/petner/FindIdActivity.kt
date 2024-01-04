@@ -2,8 +2,12 @@ package com.example.petner
 
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.style.StyleSpan
 import android.view.View
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
@@ -36,6 +40,7 @@ class FindIdActivity : AppCompatActivity() {
         val findIdButton = findViewById<View>(R.id.findIdButton)
         findIdButton.setOnClickListener {
             // 입력된 이름과 전화번호 가져오기
+
             val editTextName = findViewById<EditText>(R.id.editTextName)
             val editTextPhoneNumber = findViewById<EditText>(R.id.editTextPhoneNumber)
             val name = editTextName.text.toString()
@@ -68,10 +73,13 @@ class FindIdActivity : AppCompatActivity() {
     }
 
     private fun showResultDialog(message: String) {
-        val alertDialogBuilder = AlertDialog.Builder(this)
-        alertDialogBuilder.setTitle("아이디 찾기 결과")
-        alertDialogBuilder.setMessage(message)
+        val spannableMessage = SpannableString(message)
+        spannableMessage.setSpan(StyleSpan(Typeface.BOLD), 0, message.length, 0)
 
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle(" 아이디 찾기 결과")
+        alertDialogBuilder.setIcon(R.drawable.pawprint)
+        alertDialogBuilder.setMessage(spannableMessage)
         alertDialogBuilder.setPositiveButton("확인") { dialog, _ ->
             dialog.dismiss()
         }

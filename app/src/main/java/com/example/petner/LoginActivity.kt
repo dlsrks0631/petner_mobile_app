@@ -50,6 +50,11 @@ class LoginActivity : AppCompatActivity() {
                         val user: FirebaseUser? = auth.currentUser
                         showToast("로그인 되었습니다.")
                         // 여기에서 원하는 다음 액티비티로 이동하면 됩니다.
+                        // 메인 페이지로 이동
+                        val mainIntent = Intent(this, MainPageActivity::class.java)
+                        mainIntent.putExtra("user_id", id)
+                        startActivity(mainIntent)
+                        finish() // 현재 액티비티를 종료
                     } else {
                         // 로그인 실패
                         showToast("올바르지 않은 아이디 또는 비밀번호 입니다.")

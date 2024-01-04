@@ -98,9 +98,11 @@
         android:layout_marginRight="50dp"
         android:padding="15dp"
         android:text="로그인"
+        android:textStyle="bold"
         android:textSize="18sp"
         android:textColor="#FFFFFF"
-        android:background="#E3CAA5"/>
+        android:background="@drawable/border_radius2"
+        />
     <!-- 로그인 버튼 아래에 아이디 찾기 텍스트뷰 -->
     <TextView
         android:id="@+id/findId"
@@ -110,6 +112,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="100dp"
         android:text="아이디 찾기"
+        android:textStyle="bold"
         android:textColor="#CEAB93"
         android:textSize="14sp"
         android:clickable="true"/>
@@ -123,6 +126,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="240dp"
         android:clickable="true"
+        android:textStyle="bold"
         android:text="비밀번호 찾기"
         android:textColor="#CEAB93"
         android:textSize="14sp" />

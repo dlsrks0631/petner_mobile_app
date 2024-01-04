@@ -1,83 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="10dp">
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:background="@drawable/border"
+    android:clickable="true"
+    android:layout_margin="2dp">
+
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        >
 
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-
-                android:gravity="center">
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center">
 
             <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                >
 
-                <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/baby"
-                        android:layout_marginRight="10dp"/>
-
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfileImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/baby"
+                    app:civ_border_color="@color/colorFocus"
+                    app:civ_border_width="2dp"
+                    />
 
                 <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="김제현"
-                        android:textStyle="bold"
-                        android:layout_gravity="center"/>
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:text="사용자이름"/>
             </LinearLayout>
-
             <android.widget.Button
-                    android:layout_width="80dp"
-                    android:layout_height="30dp"
-                    android:text="연락하기"
-                    android:background="@color/colorFocus"
-                    android:textColor="@color/black"
-                    />
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="연락하기"
+                android:textColor="#ffffff"
+                android:background="@drawable/rounded_button"/>
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"/>
+            <android.widget.Button
+                android:id="@+id/showProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textColor="#ffffff"
+                android:text="프로필 보기"
+                android:background="@drawable/rounded_button"/>
         </LinearLayout>
 
 
     </LinearLayout>
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp">
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="5dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            android:layout_marginRight="20dp">
 
         <ImageView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/baby">
-        </ImageView>
-
-        <View
-                android:layout_width="10dp"
-                android:layout_height="match_parent"/>
+            android:id="@+id/postTemplateImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baby" />
+        </androidx.cardview.widget.CardView>
 
         <LinearLayout
+            android:id="@+id/postTextLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/postTitle"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="20dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="글 제목 들어가는 칸"/>
 
             <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="글 제목입니다"
-                    android:textStyle="bold"/>
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="글 내용입니다 글 내용입니다글 내용입니다글 내용입니다글 내용입니다글 내용입니다글 내용입니다글 내용입니다글 내용입니다"/>
+                android:id="@+id/postSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:textSize="14sp"
+                android:text="글 내용 들어가는 칸"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PETner</string>
+    <string name="postingButton_description">새 게시물 추가</string>
+    <string name="upload_success">업로드 성공</string>
 </resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="300dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="오늘의 인기 강아지"
+        android:textSize="30dp"
+        android:textColor="@color/colorFocus"
+        android:textStyle="bold|italic"
+        android:layout_gravity="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="11dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/popularDogImage"
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            app:civ_border_color="@color/colorFocus"
+            app:civ_border_width="8dp"
+            android:src="@drawable/dog"
+            android:layout_marginBottom="25dp"/>
+
+        <TextView
+            android:id="@+id/popularDogName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:background="@drawable/border_radius3"
+            android:text="오늘의 인기 강아지"
+            android:textStyle="bold"
+            android:textColor="@color/colorFocus"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/colorFocus"
+        android:text="내 주변 강아지"/>
+
+
+
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <android.widget.Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="🐶 주변 친구 한눈에 보기 🐶"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="@drawable/border_radius4"
+        android:id="@+id/map_btn"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <android.widget.Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="🐾 산책 친구 찾으러 가기 🐾"
+        android:textSize="20dp"
+        android:textColor="@color/colorFocus"
+        android:textStyle="bold"
+        android:background="@drawable/border_radius3"
+        android:id="@+id/show_btn"/>
+
+
+</LinearLayout>
